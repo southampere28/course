@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if else ~ js</title>
+</head>
+<body>
+    <script lang="javascript" type="text/javascript">
+        var nilai1 = parseInt(prompt("Masukkan nilai 1", "Enter"));
+        var nilai2 = parseInt(prompt("Masukkan nilai 2", "Enter"));
+        var nilai3 = parseInt(prompt("Masukkan nilai 3", "Enter"));
+
+        var total = nilai1 + nilai2 + nilai3;
+        var persen = total / 3;
+
+        if(persen % 1 != 0){
+            persen = persen.toFixed(2);
+        }
+        alert("nilai rata rata anda adalah " + persen);
+        if (persen >= 80){
+            alert("nilai kamu A");
+        }
+        else if (persen >= 70){
+            alert("nilai kamu B");
+        }
+        else if (persen >= 60){
+            alert("nilai kamu C");
+        }else{
+            alert("nilai anda D, kamu tidak lulus");
+        }
+    </script>
+</body>
+</html>

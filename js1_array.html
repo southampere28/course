@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Tutor</title>
+</head>
+<body>
+    <h1>ini array</h1>
+    <!-- <div class="container" id="berhitung">
+
+    </div> -->
+
+
+    <script languange="JavaScript" type="text/JavaScript">
+        var arr = [4,5,2,9,6,3,1,7,8];
+        var temp, i, j;
+        
+        document.write("before sort... </br>");   
+        for(i=0; i<arr.length; i++){
+            document.write(+ arr[i] + "&ensp; &ensp;");
+        }
+        document.write("</br>after sort... </br>");
+        for(i=0; i<9; i++){
+            // document.write(+ arr[i] + "&ensp; &ensp;");
+            for (j = 0; j < 8; j++) {
+                if (arr[j] > arr[j + 1]){
+                    temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+                }
+            }
+        }
+        for(i=0; i<arr.length; i++){
+            document.write(arr[i] + "&ensp; &ensp;");
+        }
+        
+    </script>
+</body>
+</html>
