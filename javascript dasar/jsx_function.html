@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+
+    <script>
+        function sayHalo(name, city){
+            if (name == "" || city == "")
+                return;
+            document.write("hallo " + name + " asal " + city);
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <input type="text" name="in1" placeholder="masukkan nama anda">
+        <input type="text" name="in2" placeholder="masukkan asal kota">
+        <input type="button" value="teken ini coy" onclick="sayHalo(in1.value, in2.value)">
+    </form>
+</body>
+</html>

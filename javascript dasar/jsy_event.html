@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event ~ js</title>
+
+    <script>
+        function MouseOver(){
+            document.getElementById("MyImg").src = "assets/coolboy1.jpg";
+        }
+        function MouseOut(){
+            document.getElementById("MyImg").src = "assets/coolboy2.jpg";
+            
+        }
+    </script>
+</head>
+<body>
+    <img src="assets/coolboy2.jpg" 
+    id="MyImg" alt="nothing to display here" style="height: 300px; width: auto;" 
+    onmouseover="MouseOver()" onmouseout="MouseOut()">
+</body>
+</html>
