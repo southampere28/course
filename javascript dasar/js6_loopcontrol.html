@@ -7,7 +7,19 @@
 </head>
 <body>
     <script>
-        // this is script
+        var i;
+        document.write("<h2>this is break statement '5'</h2>")
+        for (i = 0; i <= 10; i++) {
+            if (i == 5)
+                break;
+            document.write("i = " + i + "</br>");
+        }
+        document.write("<h2>this is continue statement '5' and '8'</h2>")
+        for (i = 0; i <= 10; i++) {
+            if (i == 5 || i ==8)
+                continue;
+            document.write("i = " + i + "</br>");
+        }
     </script>
 </body>
 </html>
