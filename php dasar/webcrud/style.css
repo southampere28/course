@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('path/to/poppins.woff2') format('woff2'),
+    url('path/to/poppins.woff') format('woff');
+}
+
+.contentTitle {
+    font-family: Poppins, "Sans Serif";
+    font-weight: bold;
+}
+
+.gradient-bg {
+    background: linear-gradient(to right, #0063B2FF, #9CC3D5FF) !important;
+}
+
+#rocketLogo{
+    width: 100%;
+    min-width: 100px;
+    max-width: 140px;
+    height: auto;
+    left: 0px;
+    right: 0px;
+}
+
+.half-circle {
+    border-top-left-radius: 20% 100%;
+    border-bottom-left-radius: 20% 100%;
+    background-color: rgb(243, 242, 242);
+    height: auto;
+}
+
+.nav-pills .nav-link{
+    font-size: 14px;
+    padding: 5px 10px !important;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-pills .nav-link.active {
+    background-color: #fff;
+    color: #0000ff;
+}
+
+.nav-pills {
+    background-color: #0000ff;
+    border-radius: 30px;
+    border: 3px solid #0000ff;
+    width: fit-content;
+}
+
+.press-form {
+    padding-left: 20vh;
+    padding-right: 15vh;
+}
+
+#right-content {
+    padding-top: 3rem;
+}
+
+
