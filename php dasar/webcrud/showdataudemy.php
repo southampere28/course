@@ -26,6 +26,7 @@ for($i=0; $i < $num_field; $i++){
     $getcol = $ress->fetch_field();
     echo "<td> <b>". $getcol->name . "</b> </td>";
 }
+echo "<td> <b>action</b> </td>";
 echo "</tr>";
 
 // show data row
@@ -33,9 +34,11 @@ for ($j=0; $j < $num_result; $j++){
     // $byrow = mysqli_fetch_row($ress);    --> this can use too seem like as below
     $byrow = $ress->fetch_row();
     echo "<tr>";
-        for($k=0; $k < $num_field; $k++){
-            echo "<td>" . $byrow[$k] . "</td>";
-        }
+    for($k=0; $k < $num_field; $k++){
+        echo "<td>" . $byrow[$k] . "</td>";
+    }
+    // echo "<td> <a href='edit.php?id=<?php echo" . $row['userid'] . ";" . " >Edit</a> <a href='#'>delete</a></td>";
+    echo "<td><a href='#'>delete</a></td>";
     echo "</tr>";
 }
 echo "</table>";
