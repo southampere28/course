@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+body{
+    background-color:#336699;
+}
+.wrapper{
+    margin-top: 5vh;
+}
+.kontenbox{
+    width: 80% !important;
+    height: 570px;
+    border-radius: 55px;
+    padding: 6px 6px;
+}
+.row {
+    padding: 0%;
+    margin: 0%;
+    min-height: 558px;
+    background-color: #2B84DD;
+    border-radius: 51px;
+}
+.col-sm-5 {
+    padding: 0%;
+    margin: 0%;
+}
+.col-sm-7 {
+    padding: 0%;
+    margin: 0%;
+    border-top-left-radius: 48px !important;
+    border-bottom-left-radius: 48px !important;
+}
+.leftcontent{
+    margin: 70px 70px;
+}
+.leftcontent .judul{
+    font-size: 28px;
+    font-family: 'Comic Neue', cursive;
+}
+.leftcontent p{
+    color: #605E5E;
+}
+.leftcontent a{
+    font-size: 12px;
+    /* justify-content: end; */
+}
+.rightcontent{
+    color: white;
+}
+.rightcontent #iconlogos{
+    transform: rotate(20deg) scale(0.8);
+}
+.rightcontent h1 {
+    font-family: 'Staatliches';
+}
+.rightcontent p{
+    margin-bottom: 0%;
+}
+.rightcontent #illus{
+    position:absolute;
+    margin-left: 0.5rem;
+    width: 24rem;
+    z-index: 2;
+    height: auto;
+}

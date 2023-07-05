@@ -1,0 +1,31 @@
+
+.contentTitle {
+    font-family: 'Poppins';
+    font-weight: bold;
+}
+
+.contentTitle h2 {
+    text-shadow: 2px 2px 4px rgb(213, 49, 235) !important;
+    color: white;
+}
+
+.shadowtext {
+    color: blue;
+    opacity: 0.5;
+    /* position: absolute; */
+    z-index: -1;
+}
+
+.gradient-bg {
+    background: linear-gradient(to right, #0063B2FF, #9CC3D5FF) !important;
+}
+
+#data-content{
+    width: 100%;
+    max-width: 1100px;
+    height: auto;
+}
+
+#maks-content {
+    min-width: 130px;
+}

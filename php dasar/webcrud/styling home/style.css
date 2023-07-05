@@ -1,0 +1,15 @@
+#jumbo1{
+    background-color: #DAF7DC !important;
+}
+
+#jumbo1 h1{
+    /* font-weight: bold; */
+    font-family: 'Staatliches', cursive;
+    font-size: 200px;
+}
+
+#jumbo1 img{
+    width: 30px;
+    height: auto;
+    transform: rotate(20deg);
+}
