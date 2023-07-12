@@ -8,7 +8,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="../style2.css">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
   </head>
   <body class="gradient-bg">
@@ -16,7 +16,7 @@
           <h2><b>tabel list member of concealed project</b></h2>
           </div>
       <?php 
-        include "koneksi.php";
+        include "../koneksi.php";
 
         if ($connection->connect_error) {
             die("Koneksi gagal: " . $connection->connect_error);

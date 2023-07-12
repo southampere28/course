@@ -6,6 +6,8 @@
     <title>Belajar Array</title>
 </head>
 <body>
+    <H1>Episode 1</H1>
+    <h3>Pengenalan Array</h3>
     <?php
         // old method
         $theday = array("Senin", "Selasa", "Rabu");
@@ -20,9 +22,16 @@
         echo "</br>";
         print_r($themonth);
         echo "</br>";
-
+        
         // print just 1 element from array
         echo $theday[1];
-    ?>
+        echo "</br>";
+
+        // new element in array
+        $theday[] = "Kamis";
+        $theday[] = "Jumat";
+
+        var_dump($theday);
+    ?>  
 </body>
 </html>
