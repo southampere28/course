@@ -1,27 +1,12 @@
 <?php  
-$dbhost = "localhost";
-$dbuser = "root";
-$dbpass = "";
-$dbname = "kelas";
+require "functions.php";
 
-$conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname );
-$result = mysqli_query($conn, "SELECT * FROM mahasiswa");
+// query sql
+$sqlquery = "SELECT * FROM mahasiswa";
 
-if( !$result ) {
-    die(mysqli_error($conn));
-}
-echo "database connected... </br>";
+// make result in array using function from functions.php
+$mahasiswa = startquery($sqlquery);
 
-// mysqli_fetch_row()   // mengembalikan nilai numerik
-// mysqli_fetch_assoc() // mengembalikan nilai assossiative
-// mysqli_fetch_array() // mengembalikan keduanya, jadi datanya 2 kali lebih banyak
-// mysqli_fetch_object()// mengembalikan object
-                        // contoh => var_dump($object->name)
-
-// while ( $lastresult = mysqli_fetch_assoc($result) ) {
-    // var_dump($lastresult["nim"]);
-//     var_dump($lastresult);
-// }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,6 +23,7 @@ echo "database connected... </br>";
 </head>
 <body>
     <h1>Daftar Mahasiswa Guys</h1>
+    <a href="tambah.php">tambahkan data baru</a>
     <table border="1" cellpadding="10" cellspacing="0">
         <tr>
             <th>No</th>
@@ -49,7 +35,7 @@ echo "database connected... </br>";
             <th>Aksi</th>
         </tr>
 
-    <?php $i = 1; while ($lastresult = mysqli_fetch_assoc($result)) : ?>
+    <?php $i = 1; foreach ( $mahasiswa as $lastresult ) : ?>
         <tr>
             <td><?=  $i ;?></td>
             <td>(ini gambar)</td>
@@ -62,7 +48,7 @@ echo "database connected... </br>";
                 <a href="">hapus</a>
             </td>
         </tr>
-    <?php  $i++; endwhile;?>
+    <?php  $i++; endforeach;?>
     </table>
 </body>
 </html>
