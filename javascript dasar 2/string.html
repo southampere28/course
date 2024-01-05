@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Javasript</title>
+</head>
+<body>
+    <h1>String Javascript</h1>
+
+    <script>
+
+        // String Instance Method and Properties
+
+        const name = "Pramudya Putra Pratama";
+
+        console.info(name.length);
+        console.info(name.toLowerCase());
+        console.info(name.toUpperCase());
+        console.info(name.split(" "));
+
+        const input = "    input data  ";
+        console.info(input.trim());
+
+        console.info(name.concat(" concat single string")); // concat 1 string
+
+        console.info(name.concat(" ", input.trim())); // concat double string
+
+        let textexample = "text3"
+        console.info(name.concat(" ", input.trim(), " ", textexample)); // concat double string
+
+    </script>
+</body>
+</html>
