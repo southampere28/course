@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Javascript</title>
+</head>
+<body>
+    <h1>Javascript Array</h1>
+
+    <script>
+        const array = ["Pramudya", "Putra", "Pratama"];
+        array[5] = "angga";
+        const iterator = array.keys();
+        
+        for (const key of iterator) {
+            console.log(`${key} : ${array[key]}`);
+        }
+        
+
+
+        // ========== array loop ===========
+        
+        // for each using anonymous function
+        array.forEach(function (value, index) {
+            console.info(`${index} : ${value}`);
+        });
+        
+        // for each using arrow function
+        array.forEach((value, index) => console.info(`${index} : ${value}`)); 
+        array.forEach((value) => console.info(`: ${value}`));   // you can remove index paramater like this
+        
+        
+
+        // ========== array queue ===========
+        const queue = [];
+
+        queue.push("First Queue");
+        queue.push("Second Queue");
+        queue.push("Third Queue");
+        console.info(queue);
+
+        console.info(queue.shift());
+        console.info(queue.shift());
+        console.info(queue.shift());
+        console.info(queue);
+
+
+
+        // =========== array stack ==========
+        const stack = [];
+
+        console.log("====================");
+        stack.push("first stack");
+        stack.push("second stack");
+        stack.push("third stack");
+        console.info(stack);
+        
+        console.info(stack.pop());
+        console.info(stack.pop());
+        console.info(stack.pop());
+        console.info(stack);
+
+
+
+        // ======== array search ===========
+        const source = [1,2,3,4,5,1,2,3,4,5];
+
+        console.log("============================")
+        console.info(source.find((value) => value > 3));
+        console.info(source.findIndex((value) => value > 3));
+        console.info(source.includes(7));
+        console.info(source.indexOf(5));
+        console.info(source.lastIndexOf(5));
+        
+        
+        
+        // ====== array filter ===========
+        console.log("============================")
+        
+        const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        
+        // filter
+        const ganjil = numbers.filter((value) => value % 2 === 1);
+        const genap = numbers.filter((value) => value % 2 === 0);
+        console.log(ganjil);
+        console.log(genap);
+
+        // filter using callback function
+        function isBigEnough(value) {
+            return value >= 10;
+        }
+
+        const filtered = [12, 5, 8, 130, 44].filter(isBigEnough);
+        console.log(filtered);
+
+
+
+        // ======= array transform =========
+        const names = ["Pramudya", "Putra", "Pratama"];
+        const namesUpper = names.map(v => v.toUpperCase());
+        console.info(namesUpper);
+
+        const namesReduce = names.reduce((before, value) => before + " " + value);
+        console.info(namesReduce);
+
+        const namesReduceRight = names.reduceRight((before, value) => before + " " + value);
+        console.info(namesReduceRight);
+
+        const number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        const total = number.reduce((before, value) => before + value);
+        console.info(total);
+
+    </script>
+</body>
+</html>
