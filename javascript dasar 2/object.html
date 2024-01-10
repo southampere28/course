@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Javascript</title>
+</head>
+<body>
+    <h1>Object Javascript</h1>
+
+    <script>
+
+        // ========== Object Freeze & Seal ===========
+        {
+
+            // => Object Freeze digunakan untuk mengubah object agar tidak
+            //      dapat dirubah maupun dihapus
+            // => Object Seal digunakan merubah object agar tidak dapat dihapus
+            //      namun tetap dapat dirubah
+            
+            const person = {
+                firstName: "Pramudya",
+                lastName: "Putra"
+            };
+            
+            Object.freeze(person);
+            // Object.seal(person);
+            
+            person.firstName = "Doni";
+            delete person.lastName;
+            
+            console.info(person);
+        }
+
+
+        // ============ Object Assign ============
+        {
+            const target = {
+                firstName: "Pramudya"
+            };
+            
+            const source = {
+                lastName: "Putra"
+            };
+            
+            Object.assign(target, source);
+            console.info(target);
+            console.info(source);
+            
+        }
+        
+        
+        // ============ Object Property Name & Value ============
+        {
+            const car = {
+                colorCar: "Toyota",
+                passengerCar: 4
+            };
+
+            console.log(Object.getOwnPropertyNames(car));
+            console.log(Object.values(car));
+            
+        }
+
+    </script>
+</body>
+</html>
