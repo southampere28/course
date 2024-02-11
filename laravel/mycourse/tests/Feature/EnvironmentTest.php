@@ -14,14 +14,14 @@ class EnvironmentTest extends TestCase
      */
     public function testGetEnvironment()
     {
-        $youtube = env('YOUTUBE');
+        $youtube = env('YOUTUBE');  // env tidak akan terbaca apabila menggunakan cache config
 
         self::assertEquals('Programmer Muda', $youtube);
     }
 
     public function testDefaultEnv()
     {
-        $author = Env::get('AUTHOR', 'Pramudya');
+        $author = Env::get('AUTHOR', 'John');
 
         self::assertEquals('Pramudya', $author);
     }
