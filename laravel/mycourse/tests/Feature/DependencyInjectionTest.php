@@ -5,6 +5,8 @@ namespace Tests\Feature;
 use App\Data\Bar;
 use App\Data\Foo;
 use Tests\TestCase;
+use App\Services\HelloService;
+use App\Services\HelloServiceIndonesia;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
@@ -54,9 +56,12 @@ class DependencyInjectionTest extends TestCase
 
     }
 
-    public function testDependencyInjection4()
+    public function testInterfaceToClass()
     {
+        $this->app->singleton(HelloService::class, HelloServiceIndonesia::class);
+        
         $helloService = $this->app->make(HelloService::class);
         
+        self::assertEquals('Halo Pramudya', $helloService->hello('Pramudya'));
     }
 }
